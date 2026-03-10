@@ -216,7 +216,7 @@
 
       <form method="post" id="form">
         <div class="row mb-3">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label>Nombres</label>
             <input
               type="text"
@@ -228,7 +228,7 @@
             <div class="invalid-feedback">Nombre inválido.</div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label>Apellidos</label>
             <input
               type="text"
@@ -239,10 +239,21 @@
             <div class="valid-feedback">Correcto</div>
             <div class="invalid-feedback">Apellido inválido.</div>
           </div>
+          <div class="col-md-4">
+            <label>Ciudad</label>
+            <input
+              type="text"
+              class="form-control nombre"
+              name="nombre"
+              data-tipo="nombre"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Ciudad inválido.</div>
+          </div>
         </div>
 
         <div class="row mb-3">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label>Email</label>
             <input
               type="email"
@@ -255,7 +266,7 @@
             <div class="invalid-feedback">email inválido.</div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label>Teléfono</label>
             <input
               type="number"
@@ -267,18 +278,15 @@
             <div class="valid-feedback">Correcto</div>
             <div class="invalid-feedback">telefono no válido.</div>
           </div>
-        </div>
-
-        <div class="row mb-3">
-          <div class="col-md-2">
+          <div class="col-md-4">
             <label>Edad</label>
             <input
               type="number"
               min="1"
-              max="6"
+              max="99"
               class="form-control"
-              name="estrato"
-              id="estrato"
+              name="edad"
+              id="edad"
             />
             <div class="valid-feedback">Correcto</div>
             <div class="invalid-feedback">Edad no válida.</div>
@@ -383,6 +391,7 @@
       </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/regexFormulario.js"></script>
   </body>
 </html>
