@@ -1,4 +1,6 @@
 let contador;
+const body = document.getElementById("body");
+const btnNegro = document.getElementById("modoBtn");
 
 function solicitarServicio() {
   contador++;
@@ -6,6 +8,12 @@ function solicitarServicio() {
   alert("Servicios solicitados: " + contador);
 }
 
-document.getElementById("modoBtn").addEventListener("click", function () {
-  document.body.classList.toggle("dark");
+btnNegro.addEventListener("click", function () {
+  if (body.style.backgroundColor === "black") {
+    body.style.backgroundColor = "White";
+  } else {
+    body.style.backgroundColor = "black";
+    btnNegro.style.backgroundColor = "White";
+    btnNegro.style.color = "black";
+  }
 });
