@@ -209,32 +209,177 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <h3 class="mt-5">Registro de Cliente</h3>
+    <div class="container mt-5 flex-grow-1">
+      <h5 class="text-center mb-4">Ingrese los datos para registrarse</h5>
 
-      <form id="formulario">
-        <input
-          type="text"
-          id="nombre"
-          placeholder="Nombre"
-          class="form-control mb-2"
-        />
+      <form method="post" id="form">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label>Nombres</label>
+            <input
+              type="text"
+              class="form-control nombre"
+              name="nombre"
+              data-tipo="nombre"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Nombre inválido.</div>
+          </div>
 
-        <input
-          type="text"
-          id="correo"
-          placeholder="Correo"
-          class="form-control mb-2"
-        />
+          <div class="col-md-6">
+            <label>Apellidos</label>
+            <input
+              type="text"
+              class="form-control nombre"
+              name="apellido"
+              data-tipo="apellido"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Apellido inválido.</div>
+          </div>
+        </div>
 
-        <input
-          type="text"
-          id="telefono"
-          placeholder="Teléfono"
-          class="form-control mb-2"
-        />
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email-sign"
+              data-tipo="email"
+              name="email"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">email inválido.</div>
+          </div>
 
-        <button class="btn btn-success" onclick="registrar()">Registrar</button>
+          <div class="col-md-6">
+            <label>Teléfono</label>
+            <input
+              type="number"
+              class="form-control"
+              name="telefono"
+              data-tipo="telefono"
+              id="telefono"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">telefono no válido.</div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-2">
+            <label>Edad</label>
+            <input
+              type="number"
+              min="1"
+              max="6"
+              class="form-control"
+              name="estrato"
+              id="estrato"
+            />
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Edad no válida.</div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <label class="fw-bold">Servicios solicitados</label>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Desarrollo web"
+                name="servicio"
+              />
+              <label> Desarrollo web</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Hosting"
+                name="servicio"
+              />
+              <label> Hosting</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Diseño UX/UI"
+                name="servicio"
+              />
+              <label>Diseño UX/UI</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Marketing digital"
+                name="servicio"
+              />
+              <label>Marketing digital</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="SEO"
+                name="servicio"
+              />
+              <label>SEO</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Desarrollo móvil"
+                name="servicio"
+              />
+              <label>Desarrollo móvil</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Soporte técnico"
+                name="servicio"
+              />
+              <label>Soporte técnico</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value="Consultoría tecnológica"
+                name="servicio"
+              />
+              <label>Consultoría tecnológica</label>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center gap-4 mt-5">
+          <button
+            class="btn btn-success px-5"
+            type="submit"
+            id="btnRegistrar"
+            onclick="todoValido()"
+          >
+            Registrar
+          </button>
+        </div>
       </form>
     </div>
 
