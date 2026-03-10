@@ -11,9 +11,11 @@ function solicitarServicio() {
 btnNegro.addEventListener("click", function () {
   if (body.style.backgroundColor === "black") {
     body.style.backgroundColor = "White";
+    btnNegro.textContent = "Modo Oscuro";
   } else {
     body.style.backgroundColor = "black";
     btnNegro.style.backgroundColor = "White";
     btnNegro.style.color = "black";
+    btnNegro.textContent = "Modo Claro";
   }
 });
